@@ -19,29 +19,31 @@
 
 </head>
 <body>
-    <h1>Nous contacter</h1>
-    <form id="contact">
-        <label>votre nom</label><br>
-        <input type="text" name="Nom" class="col-1" placeholder="Votre nom" id="nom"><br>
-        <label>votre prénom</label><br>
-        <input type="text" name="Prénom" class="col-1" placeholder="Votre prénom" id="prenom"><br>
-        <label>votre numéro de téléphone</label><br>
-        <input type="tel" name="Téléphone" class="col-1" placeholder="Votre numéro de téléphone" id="telephone"><br>
+    <div id="container">
+        <h1>Nous contacter</h1>
+        <form id="contact">
+            <label>votre nom</label><br>
+            <input type="text" name="Nom" class="col-3" placeholder="Votre nom" id="nom"><br>
+            <label>votre prénom</label><br>
+            <input type="text" name="Prénom" class="col-3" placeholder="Votre prénom" id="prenom"><br>
+            <label>votre numéro de téléphone</label><br>
+            <input type="tel" name="Téléphone" class="col-3" placeholder="Votre numéro de téléphone" id="telephone"><br>
 
-            <label>Choisissez le motif de votre message</label><br>
-        <select class="col-1" aria-label=".form-select-lg example">
+                <label>Choisissez le motif de votre message</label><br>
+            <select class="col-3">
 
-            <option selected>Motif de contact</option>
-            <option value="1">Devis</option>
-            <option value="2">Informations</option>
-            <option value="3">Réclamation</option>
-          </select><br>
-        
-          <label>Votre message</label><br>
-        <textarea name="textarea" class="col-1" placeholder="Veuillez saisir votre message ici..." max-length="200" required></textarea><br>
+                <option class="choice" selected value="">Motif de contact</option>
+                <option class="choice" value="1">Devis</option>
+                <option class="choice" value="2">Informations</option>
+                <option class="choice" value="3">Réclamation</option>
+            </select><br>
+            
+            <label>Votre message</label><br>
+            <textarea name="textarea" class="col-3" placeholder="Veuillez saisir votre message ici..." max-length="200" required></textarea><br>
 
-        <input type="submit" value="Envoyer"><br>
-    </form>
+            <button type="submit">Envoyer</button><br>
+        </form>
+    </div>
 
     <p style="color:red;" id="erreur"></p>
 
