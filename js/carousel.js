@@ -39,43 +39,36 @@
 
 
 
-
+let timer;
 let slideIndex = 0;
 showSlides();
 
+
 function plusSlides(n){
     clearTimeout(timer)
-    showSlides(slideIndex[n]);
+    showSlides(n);
 }
 
 function lessSlides(n){
    clearTimeout(timer)
-    showSlides(slideIndex[n]);
+    showSlides(n);
 }
 
 
-function currentSlide(n) {
-    clearTimeout(timer)
-    showSlides(slideIndex = n-1);
-}
-
-function showSlides() {
+function showSlides(n=1) {
   let i;
   let slides = document.getElementsByClassName("slide-box");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
+  slideIndex += n;
+  if (slideIndex > slides.length) {
+    slideIndex = 1
+  }
+  if (slideIndex < 1) {
+    slideIndex = slides.length
+  }
   slides[slideIndex-1].style.display = "block";
   timer = setTimeout(showSlides,6000)
-  console.log(slideIndex)
 }
-
-
-
-
-
-
-
 
