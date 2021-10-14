@@ -1,0 +1,28 @@
+.estimationMain {
+    margin: 5vh 5vw;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin: 5vh 0;
+}
+
+table {
+    border: 0.2em solid black;
+}
+
+td, h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.price {
+    overflow-x: hidden;
+}
+
+.lastPlace {
+    margin-right: 0;
+}
