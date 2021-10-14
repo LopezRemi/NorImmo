@@ -1,0 +1,33 @@
+document. getElementById("contact").addEventListener("submit", function(e) {
+    let erreur;
+    
+    let nom = document.getElementById("nom");
+    let prenom = document.getElementById("prenom");
+    let telephone = document.getElementById("telephone");
+
+
+    if(!prenom.value) {
+        erreur = "Votre prénom n'est pas valide";
+        break;
+    }
+
+    if(!telephone.value) {
+        erreur = "Votre numéro de téléphone n'est pas valide";
+        break;
+    }
+
+    if(!nom.value) {
+        erreur = "Votre nom n'est pas valide";
+        break;
+    }
+  
+    if (erreur) {
+        e.preventDefault();
+        document.getElementById("erreur").innerHTML = erreur;
+        return false;
+    } else {
+        alert('Formulaire envoyé !');
+    }
+
+ 
+})
