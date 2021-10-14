@@ -1,3 +1,4 @@
+
 * {box-sizing:border-box}
 
 
@@ -26,7 +27,7 @@
  margin-top: -22px;
  padding: 20px;
  font-weight: bold;
- font-size: 500%;
+ font-size: 5vw;
  transition: 0.6 ease;
  border-radius: 0 8px 8px 0;
  user-select: none;
@@ -49,7 +50,7 @@
 
 .text {
     color: white;
-  font-size: 150%;
+  font-size: 2vw;
   padding: 8px 12px;
   position: absolute;
   bottom: 12px;
