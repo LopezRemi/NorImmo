@@ -5,20 +5,16 @@ document. getElementById("contact").addEventListener("submit", function(e) {
     let prenom = document.getElementById("prenom");
     let telephone = document.getElementById("telephone");
 
-
-    if(!prenom.value) {
-        erreur = "Votre prénom n'est pas valide";
-        break;
-    }
-
     if(!telephone.value) {
         erreur = "Votre numéro de téléphone n'est pas valide";
-        break;
+    }
+    
+    if(!prenom.value) {
+        erreur = "Votre prénom n'est pas valide";
     }
 
     if(!nom.value) {
         erreur = "Votre nom n'est pas valide";
-        break;
     }
   
     if (erreur) {
@@ -29,5 +25,7 @@ document. getElementById("contact").addEventListener("submit", function(e) {
         alert('Formulaire envoyé !');
     }
 
- 
+    let textarea = document.querySelector('textarea');
+    
+    textarea.style.resized = 'none'
 })
