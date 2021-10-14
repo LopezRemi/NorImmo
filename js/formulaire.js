@@ -8,13 +8,16 @@ document. getElementById("contact").addEventListener("submit", function(e) {
     if(!telephone.value) {
         erreur = "Votre numéro de téléphone n'est pas valide";
     }
-    
+
     if(!prenom.value) {
         erreur = "Votre prénom n'est pas valide";
     }
 
     if(!nom.value) {
         erreur = "Votre nom n'est pas valide";
+    }
+    if(textarea.length > 200) {
+        erreur = "Votretexte est trop long";
     }
   
     if (erreur) {
@@ -25,7 +28,21 @@ document. getElementById("contact").addEventListener("submit", function(e) {
         alert('Formulaire envoyé !');
     }
 
-    let textarea = document.querySelector('textarea');
-    
-    textarea.style.resized = 'none'
 })
+
+// function MaxLengthTextarea(objettextarea,maxlength){
+//     if (objettextarea.value.length > maxlength) {
+//       objettextarea.value = objettextarea.value.substring(0, maxlength);
+//       alert('Votre texte ne doit pas dépasser '+maxlength+' caractères!');
+//      }
+
+
+
+
+
+
+
+//      let textarea = document.querySelector('textarea');
+    
+//      textarea.style.resized = 'none'
+//     } 

@@ -21,19 +21,24 @@
 <body>
     <h1>Nous contacter</h1>
     <form id="contact">
-        <input type="text" name="Nom" placeholder="Votre nom" id="nom"><br>
-        <input type="text" name="Prénom" placeholder="Votre prénom" id="prenom"><br>
-        <input type="tel" name="Téléphone" placeholder="Votre numéro de téléphone" id="telephone"><br>
+        <label>votre nom</label><br>
+        <input type="text" name="Nom" class="col-1" placeholder="Votre nom" id="nom"><br>
+        <label>votre prénom</label><br>
+        <input type="text" name="Prénom" class="col-1" placeholder="Votre prénom" id="prenom"><br>
+        <label>votre numéro de téléphone</label><br>
+        <input type="tel" name="Téléphone" class="col-1" placeholder="Votre numéro de téléphone" id="telephone"><br>
 
+            <label>Choisissez le motif de votre message</label><br>
         <select class="col-1" aria-label=".form-select-lg example">
+
             <option selected>Motif de contact</option>
             <option value="1">Devis</option>
             <option value="2">Informations</option>
             <option value="3">Réclamation</option>
           </select><br>
         
-
-        <textarea placeholder="Veuillez saisir votre message ici..." required></textarea><br>
+          <label>Votre message</label><br>
+        <textarea name="textarea" class="col-1" placeholder="Veuillez saisir votre message ici..." max-length="200" required></textarea><br>
 
         <input type="submit" value="Envoyer"><br>
     </form>
