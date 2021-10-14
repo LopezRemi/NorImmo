@@ -12,7 +12,7 @@
 /* cache les images par défaut */
 
 .slide-box {
-    display: ;
+    display: none;
 }
 
 /* style des bouttons */
@@ -79,9 +79,9 @@
   transition: background-color 0.6s ease;
 }
 
-/* changement couleur dot au passage souris */
+/* changement couleur dot selon celui actif */
 
- .dot:hover {
+.active, .dot:hover {
     background-color: #717171;
 }
 
