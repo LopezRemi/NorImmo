@@ -1,5 +1,5 @@
 .estimationMain {
-    margin: 5vh 5vw;
+    
     width: 60%;
     margin: auto;
     display: flex;
@@ -13,6 +13,7 @@ h2 {
 
 table {
     border: 0.2em solid black;
+    height: 40vh;
 }
 
 td, h2 {
@@ -20,7 +21,8 @@ td, h2 {
 }
 
 .price {
-    overflow-x: hidden;
+    
+    width: 1%;
 }
 
 .lastPlace {
