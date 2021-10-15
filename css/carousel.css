@@ -5,9 +5,11 @@
 /* gestion du container carousel */
 
 .carousel-container {
-    max-width: 80vw;
+    max-width: 60vw;
     position: relative;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
 }
 
 /* cache les images par défaut */
