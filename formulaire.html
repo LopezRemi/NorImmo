@@ -39,8 +39,8 @@
             </select><br>
             
             <label>Votre message</label><br>
-            <textarea name="textarea" class="col-3" placeholder="Veuillez saisir votre message ici..." max-length="200" required></textarea><br>
-
+            <textarea name="textarea" id="text-area" class="col-3" placeholder="Veuillez saisir votre message ici..." onkeyup="reste(this.value);" maxlength="200" required></textarea><br>
+            <span id="caracteres">200</span> caractères restants
             <button type="submit">Envoyer</button><br>
         </form>
     </div>

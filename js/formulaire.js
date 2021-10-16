@@ -1,4 +1,4 @@
-document. getElementById("contact").addEventListener("submit", function(e) {
+document.getElementById("contact").addEventListener("submit", function(e) {
     e.preventDefault();
     let erreur;
     
@@ -8,10 +8,7 @@ document. getElementById("contact").addEventListener("submit", function(e) {
     let choice = document.getElementsByClassName("choice.value");
     console.log(choice);
 
-    // if(textarea.required = false) {
-    //     erreur = "Votretexte est trop long";
-    // }
-
+   
     if(!telephone.value.length == 10 ) {
         erreur = "Votre numéro de téléphone n'est pas valide";
     }
@@ -37,19 +34,18 @@ document. getElementById("contact").addEventListener("submit", function(e) {
 
 })
 
-// function MaxLengthTextarea(objettextarea,maxlength){
-//     if (objettextarea.value.length > maxlength) {
-//       objettextarea.value = objettextarea.value.substring(0, maxlength);
-//       alert('Votre texte ne doit pas dépasser '+maxlength+' caractères!');
-//      }
+function reste(texte)
+{
+    let restants=200-texte.length;
+    document.getElementById('caracteres').innerHTML=restants;
+}
+
+
+document.getElementById("text-area").addEventListener("focusout",function() {
+    let textArea = document.getElementById("text-area");
+     let regEx = /\b(sexe|sex|connard|con)\b/i;
+     textArea.value = textArea.value.replace(regEx, "*!@?$");
+});
 
 
 
-
-
-
-
-//      let textarea = document.querySelector('textarea');
-    
-//      textarea.style.resized = 'none'
-//     } 
