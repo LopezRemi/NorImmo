@@ -55,10 +55,18 @@ document.getElementById("text-area").addEventListener("focusout",function() {
      textArea.value = textArea.value.replace(regEx_1, "*!@?$");
 });
 
-document.getElementsByClassName("alpha").addEventListener("focusout", function(){
-    let alphaB = document.getElementsByClassName("alpha");
-    let regEx_2 = /\b([a-zA-Z- ]*$)\b/i;
-    alphaB.value = alphaB.value.replace(regEx_1, "");
-})
+document.getElementsByClassName("alpha")[0].addEventListener("focusout", function(){
+    let alphaB = document.getElementsByClassName("alpha")[0];
+    checkIsAlphabetical(alphaB);
+});
+
+document.getElementsByClassName("alpha")[1].addEventListener("focusout", function(){
+    let alphaB = document.getElementsByClassName("alpha")[1];
+    checkIsAlphabetical(alphaB);
+});
 
 
+function checkIsAlphabetical(alphaB){
+    let regEx_2 =/[a-zA-Z\s-]*/;
+    alphaB.value = alphaB.value.match(regEx_2);
+}
