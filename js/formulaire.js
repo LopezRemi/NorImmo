@@ -7,13 +7,13 @@ document.getElementById("contact").addEventListener("submit", function(e) {
     let telephone = document.getElementById("telephone");
     let choice = document.getElementsByClassName("choice.value");
 
-    if(telephone.value.length != 10) {
-        erreur = "Votre numéro de téléphone n'est pas valide"; 
-         //telephone.style.border = 'red';
-        telephone.classList.add('red');
-    }else{
-        telephone.classList.remove('red');
-    }
+    // if(telephone.value.length != 10) {
+    //     erreur = "Votre numéro de téléphone n'est pas valide"; 
+    //      //telephone.style.border = 'red';
+    //     telephone.classList.add('red');
+    // }else{
+    //     telephone.classList.remove('red');
+    // }
 
     if(!prenom.value || prenom.value.lenght < 2 || prenom.value.length > 10) {
         erreur = "Votre prénom n'est pas valide";
@@ -73,6 +73,6 @@ function checkIsAlphabetical(alphaB){
 
 document.getElementById("telephone").addEventListener("focusout",function() {
     let verifNum = document.getElementById("telephone");
-     let regEx_3 = /\d+/;
+     let regEx_3 = /^((\+)33|0|0033)[1-9](\d{2}){4}$/g;
      verifNum.value = verifNum.value.match(regEx_3);
 });
