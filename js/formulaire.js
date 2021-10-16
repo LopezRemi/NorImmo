@@ -51,15 +51,14 @@ function reste(texte)
 
 document.getElementById("text-area").addEventListener("focusout",function() {
     let textArea = document.getElementById("text-area");
-     let regEx = /\b(sexe|sex|connard|con)\b/i;
-     textArea.value = textArea.value.replace(regEx, "*!@?$");
+     let regEx_1 = /\b(sexe|sex|connard|con)\b/i;
+     textArea.value = textArea.value.replace(regEx_1, "*!@?$");
 });
 
-document.getElementsByClassName("input").addEventListener("focusout",function() {
-    let textArea = document.getElementById("text-area");
-     let regEx = /\b(sexe|sex|connard|con)\b/i;
-     textArea.value = textArea.value.replace(regEx, "*!@?$");
-});
-
+document.getElementsByClassName("alpha").addEventListener("focusout", function(){
+    let alphaB = document.getElementsByClassName("alpha");
+    let regEx_2 = /\b([a-zA-Z- ]*$)\b/i;
+    alphaB.value = alphaB.value.replace(regEx_1, "");
+})
 
 
