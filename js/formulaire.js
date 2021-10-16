@@ -70,3 +70,9 @@ function checkIsAlphabetical(alphaB){
     let regEx_2 =/[a-zA-Z\s-]*/;
     alphaB.value = alphaB.value.match(regEx_2);
 }
+
+document.getElementById("telephone").addEventListener("focusout",function() {
+    let verifNum = document.getElementById("telephone");
+     let regEx_3 = /\d+/;
+     verifNum.value = verifNum.value.match(regEx_3);
+});
