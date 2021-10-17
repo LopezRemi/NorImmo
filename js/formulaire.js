@@ -6,6 +6,7 @@ document.getElementById("contact").addEventListener("submit", function(e) {
     
     let nom = document.getElementById("nom");
     let prenom = document.getElementById("prenom");
+    let phone = document.getElementById("telephone");
 
 
     if(!prenom.value || prenom.value.lenght < 2 || prenom.value.length > 10) {
@@ -61,6 +62,13 @@ document.getElementsByClassName("alpha")[1].addEventListener("focusout", functio
     checkIsAlphabetical(alphaB, error);
 });
 
+// récupération l'input du téléphone
+document.getElementById("telephone").addEventListener("focusout", function(){
+    let telephoneInput = document.getElementsByClassName("telephone");
+    let error = document.getElementById("phoneError");
+    checkIsPhoneNum(telephoneInput, error);
+});
+
 // Vérification par regex des alphaB
 function checkIsAlphabetical(alphaB, error){
     let regEx_2 = /[a-zA-Z\s-]*/;
@@ -78,11 +86,22 @@ function checkIsAlphabetical(alphaB, error){
 }
 
 // Vérification du numéro de téléphone format FR
-document.getElementById("telephone").addEventListener("focusout",function() {
-    let verifNum = document.getElementById("telephone");
-     let regEx_3 = /^((\+)33|0|0033)[1-9](\d{2}){4}$/g;
-     verifNum.value = verifNum.value.match(regEx_3);
-});
+
+function checkIsPhoneNum(phone, error) {
+    let regEx_3 = /^((\+)33|0|0033)[1-9](\d{2}){4}$/g;
+    console.log(regEx_3.test(phone.value));
+    if (phone.value != "" && phone.value == phone.value.match(regEx_3)){
+        phone.classList.add('green');
+        phone.classList.remove('red');
+        PhoneError.style.display = "none";
+    }
+    else {
+        phone.classList.add('red');
+        phone.classList.remove('green');
+        phoneError.style.display = "inline";
+    }
+}
+
 
 
 // ############################ zone de test ######################################
