@@ -1,5 +1,10 @@
 
 
 .red{
-    border: 2px solid red;
+    border: 2px solid #DC143C;
 }
+
+.green{
+    border: 2px solid #009db0;
+}
+
