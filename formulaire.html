@@ -24,15 +24,15 @@
   <div id="container">
     <h1>Nous contacter</h1>
     <form id="contact">
+      <label>votre prénom</label><br>
+      <input type="text" name="Prenom" class="alpha col-3" placeholder="Votre Prenom" id="prenom"><br>
+      <div><p id="firstNameError" style="display:none;color:#DC143C;">Votre prénom n'est pas valide</p></div>
       <label>votre nom</label><br>
       <input type="text" name="Nom" class="alpha col-3" placeholder="Votre nom" id="nom"><br>
-      <div><p id="firstNameError" style="display:none;color:#DC143C;">Votre nom n'est pas valide</p></div>
-      <label>votre prénom</label><br>
-      <input type="text" name="Prénom" class="alpha col-3" placeholder="Votre prénom" id="prenom"><br>
-      <div><p id="lastNameError" style="display:none;color:#DC143C;">Votre prénom n'est pas valide</p></div>
+      <div><p id="lastNameError" style="display:none;color:#DC143C;">Votre nom n'est pas valide</p></div>
       <label>votre numéro de téléphone</label><br>
       <input type="tel" name="Téléphone" class="col-3" placeholder="Votre numéro de téléphone" id="telephone"><br>
-      <div><p id="phoneError" style="display:none;color:#DC143C;">Votre prénom n'est pas valide</p></div>
+      <div><p id="phoneError" style="display:none;color:#DC143C;">Votre téléphone n'est pas valide</p></div>
 
       <label>Choisissez le motif de votre message</label><br>
       <select class="choices col-3" required>
@@ -47,11 +47,12 @@
       <textarea name="textarea" id="text-area" class="col-3" placeholder="Veuillez saisir votre message ici..."
         onkeyup="reste(this.value);" maxlength="400" required></textarea><br>
       <span id="caracteres">400</span> caractères restants
+      <div><p id="messageError" style="display:none;color:#DC143C;">Les insultes ne sont pas acceptées dans ce formulaire..</p></div><br>
       <button type="submit">Envoyer</button><br>
     </form>
   </div>
 
-  <p style="color:red;" id="erreur"></p>
+  <p style="color:#DC143C;" id="erreur"></p>
 
   <!-- Add your site or application content here -->
 
