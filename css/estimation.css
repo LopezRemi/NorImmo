@@ -4,9 +4,9 @@
     border: solid, 1px;
     margin-left: 1vw;
 }
-    /* Media Query for devices withi coarse pointers and no hover functionality */
+/* Media Query for devices withi coarse pointers and no hover functionality */
     
-    /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
     
 @media (pointer: coarse) and (hover: none) {
     header {
@@ -34,16 +34,16 @@
 
 /* ################################# HEADER ##################################### */
 
-  header {
+header {
     position: relative;
     background-color: black;
     height: 35vh;
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
-  }
+}
   
-  header video {
+header video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -56,14 +56,14 @@
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-  }
+}
   
-  header .container {
+header .container {
     position: relative;
     z-index: 2;
-  }
+}
   
-  header .overlay {
+header .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +72,7 @@
     background-color: #009bd0;
     opacity: 0.3;
     z-index: 1;
-  }
+}
 
 /* ################################# MAIN ##################################### */
 
@@ -107,7 +107,6 @@ td {
 
 .impair {
     background-color: #ccebef;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .materiauRow {
@@ -121,6 +120,7 @@ td {
 .price {
     
     width: 1%;
+    
 }
 
 .lastPlace {
@@ -136,4 +136,11 @@ footer {
 .btn-outline-light {
     color: #fbba20;
     border-color: #fbba20;
-  }
+}
+
+@media screen and (max-width : 630px) {
+    .estimationMain {
+    
+        width: 100%;
+    }
+}
