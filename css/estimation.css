@@ -137,3 +137,10 @@ footer {
     color: #fbba20;
     border-color: #fbba20;
 }
+
+@media screen and (max-width : 630px) {
+    .estimationMain {
+    
+        width: 100%;
+    }
+}
