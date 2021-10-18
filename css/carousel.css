@@ -1,0 +1,96 @@
+
+* {box-sizing:border-box}
+
+
+/* gestion du container carousel */
+
+.carousel-container {
+    max-width: 60vw;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12vh;
+}
+
+/* cache les images par défaut */
+
+.slide-box {
+    display: none;
+}
+
+/* style des bouttons */
+
+.previous, .next {
+ cursor: pointer; 
+ position: absolute;
+ top: 50%;
+ width: auto;
+ color: white;
+ margin-top: -22px;
+ padding: 20px;
+ font-weight: bold;
+ font-size: 5vw;
+ transition: 0.6 ease;
+ border-radius: 0 8px 8px 0;
+ user-select: none;
+}
+
+/* fond transparent noir au passage de souris sur boutton next previous */
+
+.previous:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* passage du boutton next a droite */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* style et placement texte des images */
+
+.text {
+    color: white;
+  font-size: 2vw;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+/*style et placement numéro image  */
+
+.numberImg {
+    color: black;
+    font-size: 15px;
+    padding: 8px 5px;
+}
+
+
+
+
+
+@media screen and (max-width : 440px) {
+
+    .carousel-container{
+        max-width: 90vw;
+    }
+}
+
+
+@media screen and (min-width : 441px) and (max-width : 990px) {
+
+    .carousel-container{
+        max-width: 85vw;
+    }
+}
+
+@media screen and (min-width : 991px) and (max-width : 1670px) {
+
+    .carousel-container{
+        max-width: 80vw;
+    }
+}

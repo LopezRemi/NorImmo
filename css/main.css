@@ -10,9 +10,14 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+.mainp {
+  font-family: roboto-condensed;
+  color: #495960;
+  font-size: x-large;
+}
 
 html {
-  color: #222;
+  color: #495960;
   font-size: 1em;
   line-height: 1.4;
 }
@@ -28,12 +33,11 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: #f1f3f4;
   text-shadow: none;
 }
 
@@ -86,6 +90,286 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+   main {
+    max-height: 120%;
+   
+    }
+  
+   /* ############################################# css lien haut de page ############################################# */
+
+   .a {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #333;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+  }
+  
+  .a::before, .a::after {
+    position: absolute;
+    background: white;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+  }
+  
+  .a::before {
+    height: 50px;
+    width: 130px;
+  }
+  
+  .a::after {
+    width: 150px;
+    height: 30px;
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  }
+  
+  .a:hover::before {
+    width: 0px;
+    background: #fff;
+  }
+  
+  .a:hover::after {
+    height: 0px;
+    background: #fff;
+  }
+  
+  .a:hover {
+    background: #fff;
+  }
+
+/* ############################################# fin css lien haut de page ############################################# */
+
+
+  :root {
+    --bs-warning: #fbba20;
+    --bs-info: #009db0;
+    --bs-light: #f1f3f4;
+  }
+/* ################################ Nav ##################################### */
+/* ############################################################################# */
+/* ############################################################################# */
+
+.btn-outline-info {
+  color: #009db0;
+  border-color: #009db0;
+  border-radius: 10px;
+}
+
+.btn-outline-info:hover {
+  color: #f1f3f4;
+  background-color: #009db0;
+  border-color: #009db0;
+  border-radius: 10px;
+
+}
+  
+/* ################################ header ##################################### */
+/* ############################################################################# */
+/* ############################################################################# */
+
+  .Hboxtext{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Htitle{
+    color: #009db0 ;
+    font-size: 500%;
+    font-family: 'Alike', serif;
+  }
+
+  .Htext{
+    font-size: 300%;
+    color: #fbba20;
+    font-family: 'Alike', serif;
+  }
+
+   header {
+    position: relative;
+    background-color: black;
+    height: 35vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #009bd0;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  
+/* ################################ fin header ##################################### */
+/* ################################################################################# */
+/* ################################################################################# */
+
+
+/* ##############################carte sous le carousel############################# */
+/* ################################################################################# */
+
+
+.carte{
+  justify-content: space-around;
+  margin-top: 10vh;
+}
+
+
+
+
+/* ################################################################################# */
+/* ################################################################################# */
+
+/* ################################texte dans et  sous carousel############################## */
+/* ########################################################################################## */
+
+
+.mainText {
+  max-width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: larger;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+/* ########################################## main ########################################## */
+/* ########################################################################################## */
+
+h2{
+  font-family: 'Alike', serif;
+  margin-bottom: 1%;
+}
+
+
+/* ########################################################################################## */
+/* ########################################################################################## */
+
+/* ###################################### FOOTER ##########################################  */
+.btn-outline-light {
+  color: #fbba20;
+  border-color: #fbba20;
+}
+/* ###################################### nav ##########################################  */
+/* ###################################### nav ##########################################  */
+
+
+.nav-link {
+  border: solid, 1px;
+  margin-left: 1vw;
+}
+
+
+
+  /* Media Query for devices withi coarse pointers and no hover functionality */
+  
+  /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      image-resolution: initial;
+      background: url("https://prmeng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2021/05/11/node_191435/38497679/public/2021/05/11/B9726992317Z.1_20210511071743_000%2BGM4I3P1Q3.2-0.jpeg.jpg?itok=_4fPslTx1620893520") black no-repeat center center scroll;
+    width: 100%;
+    }
+  
+    header video {
+      display: none;
+    }
+  }
+
+ /* Smartphones (portrait) ----------- */
+@media screen and (max-width : 440px) {
+  
+
+  .Htitle{
+  font-size: 300%;
+  }
+
+  .Htext{
+    font-size: 150%;
+  }
+
+  .a{
+    all: unset;
+  }
+
+  .card-text{
+    font-size: 60%;
+  }
+
+  .carte {
+    flex-wrap: wrap;
+  }
+
+}
+
+@media screen and (min-width : 441px) and (max-width : 990px) {
+  
+  .Htitle{
+    font-size: 400%;
+  }
+  
+  .Htext{
+    font-size: 250%;
+  }
+  
+  .a{
+    all: unset;
+  }
+}
+
+  
+@media screen and (min-width : 991px) and (max-width : 1670px) {
+
+  .find {
+   display: none;
+  }
+}
+
+
 
 /* ==========================================================================
    Helper classes

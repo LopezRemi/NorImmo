@@ -1,0 +1,139 @@
+/* ################################# NAV ##################################### */
+
+.nav-link {
+    border: solid, 1px;
+    margin-left: 1vw;
+}
+    /* Media Query for devices withi coarse pointers and no hover functionality */
+    
+    /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+    
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('https://france3-regions.francetvinfo.fr/image/25jlbtVbWZ2rqlcO44sdV9wKd1w/930x620/regions/2020/06/09/5edf28f70509a_img_0606.jpg') black no-repeat center center scroll;
+    }
+    
+    header video {
+        display: none;
+    }
+}
+
+.btn-outline-info {
+    color: #009db0;
+    border-color: #009db0;
+    border-radius: 10px;
+}
+  
+.btn-outline-info:hover {
+    color: #f1f3f4;
+    background-color: #009db0;
+    border-color: #009db0;
+    border-radius: 10px;
+  
+}
+
+/* ################################# HEADER ##################################### */
+
+  header {
+    position: relative;
+    background-color: black;
+    height: 35vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #009bd0;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+/* ################################# MAIN ##################################### */
+
+.estimationMain {
+    
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin: 10vh 0;
+}
+
+.mainTitle {
+    margin-bottom: 8vh;
+}
+
+.table {
+    border: 0.2em solid #009DB0;
+    height: 40vh;
+    
+}
+
+td {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    
+}
+
+.impair {
+    background-color: #ccebef;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.materiauRow {
+    height: 4vh;
+}
+
+.materiau {
+    font-size: 0.80em;
+}
+
+.price {
+    
+    width: 1%;
+}
+
+.lastPlace {
+    margin-right: 0;
+}
+
+/* ################################# FOOTER ##################################### */
+
+footer {
+    margin-top: 10vh;
+}
+
+.btn-outline-light {
+    color: #fbba20;
+    border-color: #fbba20;
+  }
