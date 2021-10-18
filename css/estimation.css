@@ -107,7 +107,6 @@ td {
 
 .impair {
     background-color: #ccebef;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .materiauRow {
@@ -121,6 +120,7 @@ td {
 .price {
     
     width: 1%;
+    
 }
 
 .lastPlace {
