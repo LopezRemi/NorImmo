@@ -91,11 +91,72 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   main {
+    max-height: 120%;
+   
+    }
+  
+   /* ############################################# css lien haut de page ############################################# */
 
-main {
-  max-height: 120%;
- 
+   .a {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #333;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
   }
+  
+  .a::before, .a::after {
+    position: absolute;
+    background: #eee;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+  }
+  
+  .a::before {
+    height: 50px;
+    width: 130px;
+  }
+  
+  .a::after {
+    width: 150px;
+    height: 30px;
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  }
+  
+  .a:hover::before {
+    width: 0px;
+    background: #fff;
+  }
+  
+  .a:hover::after {
+    height: 0px;
+    background: #fff;
+  }
+  
+  .a:hover {
+    background: #fff;
+  }
+
+/* ############################################# fin css lien haut de page ############################################# */
+
 
   :root {
     --bs-warning: #fbba20;
@@ -186,6 +247,21 @@ main {
 /* ################################################################################# */
 /* ################################################################################# */
 
+
+/* ##############################carte sous le carousel############################# */
+/* ################################################################################# */
+
+
+.carte{
+  justify-content: space-around;
+  margin-top: 10%;
+}
+
+
+
+
+/* ################################################################################# */
+/* ################################################################################# */
 
 /* ################################texte dans et  sous carousel############################## */
 /* ########################################################################################## */
