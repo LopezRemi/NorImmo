@@ -20,94 +20,105 @@
   <script src="https://kit.fontawesome.com/e55314bf79.js" crossorigin="anonymous"></script>
 </head>
 
+
+
+ <!-- ############################################## NAV ################################################## -->
+
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid justify-content-center">
-      <img src="img/logo_norimmolion_petit.png" alt="logo_entreprise" id="logo" class="row2 text-center"></div> 
-     <div class="container-fluid">
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           <li class="nav-item">
-             <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="formulaire.html">Contact</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="estimation.html">Devis</a>
-           </li>
-         </ul>
-         <form class="d-flex">
-           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-           <button class="btn btn-outline-info" type="submit">Search</button>
-         </form>
-       </div>
+  
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid justify-content-center">
+    <img src="img/logo_norimmolion_petit.png" alt="logo_entreprise" id="logo" class="row2 text-center"></div> 
+   <div class="container-fluid">
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+           <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="formulaire.html">Contact</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="estimation.html">Devis</a>
+         </li>
+       </ul>
+       <form class="d-flex">
+         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+         <button class="btn btn-outline-info" type="submit">Search</button>
+       </form>
      </div>
-   </nav>
+   </div>
+ </nav>
 
-   <header>
+ <header>
 
-    <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
-    <div class="overlay"></div>
+  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="overlay"></div>
 
-    <!-- The HTML5 video element that will create the background video on the header -->
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="video/Welcome to Normandie - Drone (2).mp4" type="video/mp4">
-    </video>
+  <!-- The HTML5 video element that will create the background video on the header -->
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="video/Welcome to Normandie - Drone (2).mp4" type="video/mp4">
+  </video>
 
-    <!-- The header content -->
-    <div class="container h-100">
-      <div class="d-flex h-100 text-center align-items-center">
-        <div class="Hboxtext">
-          <h1 class="Htitle">NORIMMO</h1>
-          <p class="Htext">L'immobilier en Normandie</p>
-        </div>
+  <!-- The header content -->
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="Hboxtext">
+        <h1 class="Htitle">NORIMMO</h1>
+        <p class="Htext">L'immobilier en Normandie</p>
       </div>
     </div>
-  </header>
-
-
-</main>
-
-  <div id="container">
-    <h1>Nous contacter</h1>
-    <form id="contact">
-      <label>votre prénom</label><br>
-      <input type="text" name="Prenom" class="alpha col-3" placeholder="Votre Prenom" id="prenom"><br>
-      <div><p id="firstNameError" style="display:none;color:#DC143C;">Votre prénom n'est pas valide</p></div>
-      <label>votre nom</label><br>
-      <input type="text" name="Nom" class="alpha col-3" placeholder="Votre nom" id="nom"><br>
-      <div><p id="lastNameError" style="display:none;color:#DC143C;">Votre nom n'est pas valide</p></div>
-      <label>votre numéro de téléphone</label><br>
-      <input type="tel" name="Téléphone" class="col-3" placeholder="Votre numéro de téléphone" id="telephone"><br>
-      <div><p id="phoneError" style="display:none;color:#DC143C;">Votre téléphone n'est pas valide</p></div>
-
-      <label>Choisissez le motif de votre message</label><br>
-      <select class="choices col-3" required>
-
-        <option class="choice" selected value="" disabled>Motif de contact</option>
-        <option class="choice" value="devis">Devis</option>
-        <option class="choice" value="informations">Informations</option>
-        <option class="choice" value="reclamation">Réclamation</option>
-      </select><br>
-
-      <label>Votre message</label><br>
-      <textarea name="textarea" id="text-area" class="col-3" placeholder="Veuillez saisir votre message ici..."
-        onkeyup="reste(this.value);" maxlength="400" required></textarea><br>
-      <span id="caracteres">400</span> caractères restants
-      <div><p id="messageError" style="display:none;color:#DC143C;">Les insultes ne sont pas acceptées dans ce formulaire..</p></div><br>
-      <button type="submit">Envoyer</button><br>
-    </form>
   </div>
+</header>
 
-  <p style="color:#DC143C;" id="erreur"></p>
+
+ <!-- ############################################## FORMULAIRE ################################################## -->
+
+
+<main class="container text-center">
+
+    <div id="container" class="py-5 shadow">
+      <h1>Nous contacter</h1>
+      <form id="contact">
+        <label class="mt-2">votre prénom</label><br>
+        <input type="text" name="Prenom" class="alpha col-5" placeholder="Votre Prenom" id="prenom"><br>
+        <div><p id="firstNameError" style="display:none;color:#DC143C;">Votre prénom n'est pas valide</p></div>
+        <label class="mt-2">votre nom</label><br>
+        <input type="text" name="Nom" class="alpha col-5" placeholder="Votre nom" id="nom"><br>
+        <div><p id="lastNameError" style="display:none;color:#DC143C;">Votre nom n'est pas valide</p></div>
+        <label class="mt-2">votre numéro de téléphone</label><br>
+        <input type="tel" name="Téléphone" class="col-5" placeholder="Votre numéro de téléphone" id="telephone"><br>
+        <div><p id="phoneError" style="display:none;color:#DC143C;">Votre téléphone n'est pas valide</p></div>
+
+        <label class="mt-2">Choisissez le motif de votre message</label><br>
+        <select class="choices col-5" required>
+
+          <option class="choice" selected value="" disabled>Motif de contact</option>
+          <option class="choice" value="devis">Devis</option>
+          <option class="choice" value="informations">Informations</option>
+          <option class="choice" value="reclamation">Réclamation</option>
+        </select><br>
+
+        <label class="mt-2">Votre message</label><br>
+        <textarea name="textarea" id="text-area" class="col-5" placeholder="Veuillez saisir votre message ici..."
+          onkeyup="reste(this.value);" maxlength="400" required></textarea><br>
+        <span id="caracteres">400</span> caractères restants
+        <div><p id="messageError" style="display:none;color:#DC143C;">Les insultes ne sont pas acceptées dans ce formulaire..</p></div><br>
+        <button type="submit" class="">Envoyer</button><br>
+      </form>
+    </div>
+    <p style="color:#DC143C;" id="erreur"></p>
 
 </main>
+
+
+ <!-- ############################################## FOOTER ################################################## -->
+
+
 
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
