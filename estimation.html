@@ -27,6 +27,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
     </style>
 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
+    </style>
+
 </head>
 
 <body>
@@ -43,13 +48,13 @@
            <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                <li class="nav-item">
-                 <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                 <a class="nav-link active a" aria-current="page" href="index.html">Accueil</a>
                </li>
                <li class="nav-item">
-                 <a class="nav-link" href="formulaire.html">Contact</a>
+                 <a class="nav-link active a" href="formulaire.html ">Contact</a>
                </li>
                <li class="nav-item">
-                 <a class="nav-link" href="estimation.html">Devis</a>
+                 <a class="nav-link active a" href="estimation.html">Devis</a>
                </li>
              </ul>
              <form class="d-flex">
@@ -67,7 +72,7 @@
      
          <!-- The HTML5 video element that will create the background video on the header -->
          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-           <source src="video/Welcome to Normandie - Drone (2).mp4" type="video/mp4">
+           <source src="video/norimoooo.mp4" type="video/mp4">
          </video>
      
          <!-- The header content -->
@@ -83,7 +88,7 @@
 
 
     <main class="estimationMain">
-        <h2>Estimation du prix des travaux</h2>
+        <h2 class="mainTitle">Estimation du prix des travaux</h2>
         <table class="table">
             <form action="#">
                 <tr>
@@ -94,11 +99,11 @@
                     <td></td>
                 </tr>
                 <tr class="impair">
-                    <td style="color:#ffffff">Surface en m2</td>
+                    <td>Surface en m2</td>
                     <td><input id="qt1" type="text" size="2"></td>
                     <td><input id="cu1" type="text" size="5" value="1000" readonly></td>
                     <td><input id="pht1" type="text" size="5" readonly></td>
-                    <td style="color:#ffffff" class="price">€</td>
+                    <td class="price">€</td>
                 </tr>
                 <tr>
                     <td>Nombre de chambres</td>
@@ -107,15 +112,15 @@
                     <td><input id="pht2" type="text" size="5" readonly></td>
                     <td class="price">€</td>
                 </tr>
-                <tr class="impair">
-                    <td style="color:#ffffff">Matériau utilisé</td>
+                <tr class="impair materiauRow">
+                    <td>Matériau utilisé</td>
                     <td><select id="materiau">
                         <option value="1.20">Parpaing</option>
                         <option value="1.30">Brique</option>
                         <option value="1.15">Bois</option>
                       </select>
                     </td>
-                    <td></td>
+                    <td class="materiau"> Parpaing: +20%<br/>Brique: +30%<br/>Bois: +15%</td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -129,9 +134,9 @@
                 <tr class="impair">
                     <td><input onclick="priceCalcul()" type="button" value="Calculer"></td>
                     <td></td>
-                    <td style="color:#ffffff">Prix TTC</td>
+                    <td>Prix TTC</td>
                     <td><input id="ttc" type="text" size="5" readonly></td>
-                    <td style="color:#ffffff" class="price">€</td>
+                    <td class="price">€</td>
                     
                 </tr>
             </form>

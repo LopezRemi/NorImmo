@@ -1,18 +1,18 @@
 
-
+var isThereAnErrorOnMyInputs = false;
 
 // récupération du premier élément du tableau alpha soit prénom
 document.getElementsByClassName("alpha")[0].addEventListener("focusout", function(){
     let alphaB = document.getElementsByClassName("alpha")[0];
     let error = document.getElementById("firstNameError");
-    checkIsAlphabetical(alphaB, error);
+    isThereAnErrorOnMyInputs = checkIsAlphabetical(alphaB, error);
 });
 
 // récupération du deuxième élément du tableau alpha soit nom
 document.getElementsByClassName("alpha")[1].addEventListener("focusout", function(){
     let alphaB = document.getElementsByClassName("alpha")[1];
     let error = document.getElementById("lastNameError");
-    checkIsAlphabetical(alphaB, error);
+    isThereAnErrorOnMyInputs = checkIsAlphabetical(alphaB, error);
 });
 
 
@@ -24,20 +24,22 @@ function checkIsAlphabetical(alphaB, error){
         alphaB.classList.add('green');
         alphaB.classList.remove('red');
         error.style.display = "none";
+        return false;
     }
     else {
         alphaB.classList.add('red');
         alphaB.classList.remove('green');
         error.style.display = "inline";
-    }
+        return true;
+    } 
 }
-
 
 // récupération l'input du téléphone
 document.getElementById("telephone").addEventListener("focusout", function(){
     let telephoneInput = document.getElementById("telephone");
     let error = document.getElementById("phoneError");
-    checkIsPhoneNum(telephoneInput, error);
+    isThereAnErrorOnMyInputs = checkIsPhoneNum(telephoneInput, error);
+
 });
 
 
@@ -49,38 +51,49 @@ function checkIsPhoneNum(phone, error) {
         phone.classList.add('green');
         phone.classList.remove('red');
         error.style.display = "none";
+        return false;
     }
     else {
         phone.classList.add('red');
         phone.classList.remove('green');
         error.style.display = "inline";
+        return true;
     }
 }
 // Vérification du textarea
 
 document.getElementById("text-area").addEventListener("focusout",function() {
     let textArea = document.getElementById("text-area");
-    let error = document.getElementById("messageError");
-    
-    checkNoInsult(textArea, error);
+    let error1 = document.getElementById("messageError");
+    let error2 = document.getElementById("messageError_2");
+    isThereAnErrorOnMyInputs = checkNoInsult(textArea, error1, error2);
 });
 
-function checkNoInsult(textArea, error) {
+function checkNoInsult(textArea, error1, error2) {
     let regEx_1 = /\b(sexe|sex|connard|con)\b/i;
 
-    if (textArea.value.match(regEx_1)){
+    if (textArea.value == ""){
         textArea.classList.add('red');
         textArea.classList.remove('green');
-        error.style.display = "inline";
-        
+        error1.style.display = "none";
+        error2.style.display = "inline";
+        return true;
+    }
+    else if (textArea.value.match(regEx_1)){
+        textArea.classList.add('red');
+        textArea.classList.remove('green');
+        error1.style.display = "inline";
+        error2.style.display = "none";
+        return true;
     }
     else {
         textArea.classList.add('green');
         textArea.classList.remove('red');
-        error.style.display = "none";
+        error1.style.display = "none";
+        error2.style.display = "none";
+        return false;
     }
 }
-
 
 function reste(texte)
 {
@@ -104,17 +117,11 @@ function reste(texte)
 
 document.getElementById("contact").addEventListener("submit", function(e) {
     e.preventDefault();
-    if (checkIsAlphabetical = false) {
+    console.log(isThereAnErrorOnMyInputs);
+    if (isThereAnErrorOnMyInputs === true) {
         alert('Erreur formulaire !');
-        // return false;
-    }
-    if (checkIsPhoneNum = false) {
-        alert('Erreur formulaire !');
-        // return false;
-    }
-    if (checkNoInsult = false) {
-        alert('Erreur formulaire !');
-        // return false;
+        return;
+    
     }
     else {
         alert('Formulaire envoyé !');
