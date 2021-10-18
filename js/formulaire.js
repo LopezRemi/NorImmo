@@ -61,31 +61,26 @@ function checkIsPhoneNum(phone, error) {
 document.getElementById("text-area").addEventListener("focusout",function() {
     let textArea = document.getElementById("text-area");
     let error = document.getElementById("messageError");
-    let error_2 = document.getElementById("messageError_2");
-    checkNoInsult(textArea, error, error_2);
+    
+    checkNoInsult(textArea, error);
 });
 
 function checkNoInsult(textArea, error) {
     let regEx_1 = /\b(sexe|sex|connard|con)\b/i;
 
-    if (textArea.value == textArea.value.match(regEx_1)){
+    if (textArea.value.match(regEx_1)){
         textArea.classList.add('red');
         textArea.classList.remove('green');
         error.style.display = "inline";
-
-    if (textArea.value == "")
-        textArea.classList.add('red');
-        textArea.classList.remove('green');   
-        error_2.style.display = "inline";
         
     }
     else {
         textArea.classList.add('green');
         textArea.classList.remove('red');
         error.style.display = "none";
-        error_2.style.display = "none";
     }
 }
+
 
 function reste(texte)
 {
@@ -105,34 +100,6 @@ function reste(texte)
 
 
 
-//     if(!prenom.value || prenom.value.lenght < 2 || prenom.value.length > 10) {
-//         erreur = "Votre prénom n'est pas valide";
-//         prenom.classList.add('red');
-//     }else{
-//         prenom.classList.add('green');
-//     }
-//     if(!nom.value || nom.value.lenght < 2 || nom.value.length > 10) {
-//         erreur = "Votre nom n'est pas valide";
-//         nom.classList.add('red');
-//     }else{
-//         nom.classList.add('green');
-//     }
-  
-
-//     if (erreur) {
-//         e.preventDefault();
-//         document.getElementById("erreur").innerHTML = erreur;
-//         alert('Erreur formulaire !');
-//         return false;
-//     } else {
-//         alert('Formulaire envoyé !');
-//     }
-
-// });
-
-
-
-
 // ############################ zone de test ######################################
 
 document.getElementById("contact").addEventListener("submit", function(e) {
@@ -145,7 +112,7 @@ document.getElementById("contact").addEventListener("submit", function(e) {
         alert('Erreur formulaire !');
         // return false;
     }
-    if (checkNoInsult = true) {
+    if (checkNoInsult = false) {
         alert('Erreur formulaire !');
         // return false;
     }

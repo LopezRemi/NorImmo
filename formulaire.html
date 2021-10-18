@@ -88,35 +88,34 @@
     <div id="container" class="py-5 shadow">
       <h1>Nous contacter</h1>
       <form id="contact">
-        <label class="mt-2">votre prénom</label><br>
-        <input type="text" name="Prenom" class="alpha" col-5 minlength="2" maxlength="50" placeholder="Votre Prenom" id="prenom"><br>
+        <label class="instructions mt-2">-- Votre prénom --</label><br>
+        <input type="text" name="Prenom" class="alpha col-5" minlength="2" maxlength="50" placeholder="Votre Prenom" id="prenom"><br>
         <div><p id="firstNameError" style="display:none;color:#DC143C;">Votre prénom n'est pas valide</p></div>
-        <label class="mt-2">votre nom</label><br>
-        <input type="text" name="Nom" class="alpha" col-5 minlength="2" maxlength="50" placeholder="Votre nom" id="nom"><br>
+        <label class="instructions mt-2">-- Votre nom --</label><br>
+        <input type="text" name="Nom" class="alpha col-5" minlength="2" maxlength="50" placeholder="Votre nom" id="nom"><br>
         <div><p id="lastNameError" style="display:none;color:#DC143C;">Votre nom n'est pas valide</p></div>
-        <label class="mt-2">votre numéro de téléphone</label><br>
+        <label class="instructions mt-2">-- Votre numéro de téléphone --</label><br>
         <input type="tel" name="Téléphone" class="col-5" placeholder="Votre numéro de téléphone" id="telephone"><br>
         <div><p id="phoneError" style="display:none;color:#DC143C;">Votre téléphone n'est pas valide</p></div>
 
-        <label class="mt-2">Choisissez le motif de votre message</label><br>
-        <select class="choices col-5" required>
+        <label class="instructions mt-2">-- Choisissez le motif de votre message --</label><br>
+        <select class="choice col-5" required>
 
-          <option class="choice" selected value="" disabled>Motif de contact</option>
+          <option class="choice" selected value="" disabled>-- Motif de contact --</option>
           <option class="choice" value="devis">Devis</option>
           <option class="choice" value="informations">Informations</option>
           <option class="choice" value="reclamation">Réclamation</option>
         </select><br>
 
-        <label class="mt-2">Votre message</label><br>
-        <textarea name="textarea" id="text-area" class="col-5 minlength="2"" placeholder="Veuillez saisir votre message ici..."
+        <label class="instructions mt-2">-- Votre message --</label><br>
+        <textarea name="textarea" id="text-area" class="col-5" minlength="2" placeholder="Veuillez saisir votre message ici..."
           onkeyup="reste(this.value);" maxlength="400" required></textarea><br>
         <span id="caracteres">400</span> caractères restants
         <div><p id="messageError" style="display:none;color:#DC143C;">Les insultes ne sont pas acceptées dans ce formulaire..</p></div><br>
         <div><p id="messageError_2" style="display:none;color:#DC143C;">Vous devez écrire un message..</p></div><br>
-        <button type="submit" class="">Envoyer</button><br>
+        <button class="btn btn-outline-info" type="submit">Envoyer</button><br>
       </form>
     </div>
-    <p style="color:#DC143C;" id="erreur"></p>
 
 </main>
 
