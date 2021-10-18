@@ -116,7 +116,7 @@ textarea {
   
   .a::before, .a::after {
     position: absolute;
-    background: #eee;
+    background: white;
     z-index: -1;
     transition: 1s;
     content: '';
@@ -254,7 +254,7 @@ textarea {
 
 .carte{
   justify-content: space-around;
-  margin-top: 10%;
+  margin-top: 10vh;
 }
 
 
@@ -310,13 +310,64 @@ h2{
   
   @media (pointer: coarse) and (hover: none) {
     header {
-      background: url('https://france3-regions.francetvinfo.fr/image/25jlbtVbWZ2rqlcO44sdV9wKd1w/930x620/regions/2020/06/09/5edf28f70509a_img_0606.jpg') black no-repeat center center scroll;
+      image-resolution: initial;
+      background: url("https://prmeng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2021/05/11/node_191435/38497679/public/2021/05/11/B9726992317Z.1_20210511071743_000%2BGM4I3P1Q3.2-0.jpeg.jpg?itok=_4fPslTx1620893520") black no-repeat center center scroll;
+    width: 100%;
     }
   
     header video {
       display: none;
     }
   }
+
+ /* Smartphones (portrait) ----------- */
+@media screen and (max-width : 440px) {
+  
+
+  .Htitle{
+  font-size: 300%;
+  }
+
+  .Htext{
+    font-size: 150%;
+  }
+
+  .a{
+    all: unset;
+  }
+
+  .card-text{
+    font-size: 60%;
+  }
+
+  .carte {
+    flex-wrap: wrap;
+  }
+
+}
+
+@media screen and (min-width : 441px) and (max-width : 990px) {
+  
+  .Htitle{
+    font-size: 400%;
+  }
+  
+  .Htext{
+    font-size: 250%;
+  }
+  
+  .a{
+    all: unset;
+  }
+}
+
+  
+@media screen and (min-width : 991px) and (max-width : 1670px) {
+
+  .find {
+   display: none;
+  }
+}
 
 
 
