@@ -64,13 +64,16 @@ function checkIsPhoneNum(phone, error) {
 
 document.getElementById("text-area").addEventListener("focusout",function() {
     let textArea = document.getElementById("text-area");
+
     let error1 = document.getElementById("messageError");
     let error2 = document.getElementById("messageError_2");
     isThereAnErrorOnMyInputs = checkNoInsult(textArea, error1, error2);
+
 });
 
 function checkNoInsult(textArea, error1, error2) {
     let regEx_1 = /\b(sexe|sex|connard|con)\b/i;
+
 
     if (textArea.value == ""){
         textArea.classList.add('red');
@@ -85,15 +88,19 @@ function checkNoInsult(textArea, error1, error2) {
         error1.style.display = "inline";
         error2.style.display = "none";
         return true;
+
     }
     else {
         textArea.classList.add('green');
         textArea.classList.remove('red');
+
         error1.style.display = "none";
         error2.style.display = "none";
         return false;
+
     }
 }
+
 
 function reste(texte)
 {
@@ -117,8 +124,10 @@ function reste(texte)
 
 document.getElementById("contact").addEventListener("submit", function(e) {
     e.preventDefault();
+
     console.log(isThereAnErrorOnMyInputs);
     if (isThereAnErrorOnMyInputs === true) {
+
         alert('Erreur formulaire !');
         return;
     
