@@ -89,18 +89,22 @@ h2 {
     margin: 10vh 0;
 }
 
-table {
-    border: 0.2em solid black;
+.table {
+    border: 0.2em solid #009DB0;
     height: 40vh;
+    
 }
 
 td, h2 {
     font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
 }
 
 .impair {
-    background-color: #F8F8FF;
+    background-color: #009DB0;
+    opacity: 0.75;
 }
+
 
 tr {
     
