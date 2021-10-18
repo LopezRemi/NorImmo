@@ -8,3 +8,11 @@
     border: 2px solid #009db0;
 }
 
+.instructions {
+color: #009db0;
+font-weight: 600;
+}
+
+.choice {
+    color: grey;
+}
