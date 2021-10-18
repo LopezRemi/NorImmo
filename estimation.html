@@ -27,6 +27,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
     </style>
 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
+    </style>
+
 </head>
 
 <body>
@@ -83,7 +88,7 @@
 
 
     <main class="estimationMain">
-        <h2>Estimation du prix des travaux</h2>
+        <h2 class="mainTitle">Estimation du prix des travaux</h2>
         <table class="table">
             <form action="#">
                 <tr>
@@ -107,7 +112,7 @@
                     <td><input id="pht2" type="text" size="5" readonly></td>
                     <td class="price">€</td>
                 </tr>
-                <tr class="impair">
+                <tr class="impair materiauRow">
                     <td style="color:#ffffff">Matériau utilisé</td>
                     <td><select id="materiau">
                         <option value="1.20">Parpaing</option>
@@ -115,7 +120,7 @@
                         <option value="1.15">Bois</option>
                       </select>
                     </td>
-                    <td></td>
+                    <td class="materiau" style="color:#ffffff"> Parpaing: x1.20<br/>Brique: x1.30<br/>Bois: x1.15</td>
                     <td></td>
                     <td></td>
                 </tr>
