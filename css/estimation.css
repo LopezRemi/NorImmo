@@ -86,7 +86,7 @@
 
 h2 {
     text-align: center;
-    margin: 5vh 0;
+    margin: 10vh 0;
 }
 
 table {
@@ -96,6 +96,14 @@ table {
 
 td, h2 {
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+.impair {
+    background-color: #F8F8FF;
+}
+
+tr {
+    
 }
 
 .price {
@@ -110,7 +118,7 @@ td, h2 {
 /* ################################# FOOTER ##################################### */
 
 footer {
-    margin-top: 5vh;
+    margin-top: 10vh;
 }
 
 .btn-outline-light {

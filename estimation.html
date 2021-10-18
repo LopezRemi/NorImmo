@@ -25,31 +25,33 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="formulaire.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="estimation.html">Devis</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid justify-content-center">
+      <img src="img/logo_norimmolion_petit.png" alt="logo_entreprise" id="logo" class="row2 text-center"></div> 
+     <div class="container-fluid">
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="formulaire.html">Contact</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="estimation.html">Devis</a>
+           </li>
+         </ul>
+         <form class="d-flex">
+           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+           <button class="btn btn-outline-info" type="submit">Search</button>
+         </form>
+       </div>
+     </div>
+   </nav>
     
     <header>
 
@@ -83,7 +85,7 @@
                     <td class="price">Prix</td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr class="impair">
                     <td>Surface en m2</td>
                     <td><input id="qt1" type="text" size="2"></td>
                     <td><input id="cu1" type="text" size="5" value="1000" readonly></td>
@@ -97,7 +99,7 @@
                     <td><input id="pht2" type="text" size="5" readonly></td>
                     <td class="price">€</td>
                 </tr>
-                <tr>
+                <tr class="impair">
                     <td>Matériau utilisé</td>
                     <td><select id="materiau">
                         <option value="1.20">Parpaing</option>
@@ -116,7 +118,7 @@
                     <td><input id="tht" type="text" size="5" readonly></td>
                     <td class="price">€</td>
                 </tr>
-                <tr>
+                <tr class="impair">
                     <td><input onclick="priceCalcul()" type="button" value="Calculer"></td>
                     <td></td>
                     <td>Prix TTC</td>
